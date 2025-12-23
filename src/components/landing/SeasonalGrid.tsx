@@ -1,40 +1,37 @@
 import { Link } from "react-router-dom";
 import { LivingCard } from "../ui/LivingCard";
-import { Sparkles } from "lucide-react";
+import { Gift } from "lucide-react";
 
 const seasonalItems = [
   {
     id: "christmas",
     title: "Holiday Cheer",
-    image:
-      "https://images.unsplash.com/photo-1512389142860-9c449e58a543?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/christmas-cheer.png",
     size: "large",
   },
   {
     id: "new-year",
     title: "New Year's Eve",
-    image:
-      "https://images.unsplash.com/photo-1576158142340-9e63cd272421?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/new-years-eve.png",
     size: "small",
   },
   {
     id: "winter-party",
     title: "Winter Gala",
-    image:
-      "https://images.unsplash.com/photo-1482517967863-00e15c9b4499?q=80&w=1000&auto=format&fit=crop",
+    image: "/images/winter-gala.png",
     size: "small",
   },
 ];
 
 export const SeasonalGrid = () => {
   return (
-    <section className="py-24 bg-brand-sand relative">
+    <section className="py-24 bg-brand-cream relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-brand-orange/10 text-brand-orange text-sm font-bold tracking-wide uppercase mb-4 border border-brand-orange/20">
-            <Sparkles className="w-4 h-4 mr-2" /> Season's Greetings
+          <span className="inline-flex items-center px-4 py-1.5 rounded-full bg-brand-gold/10 text-brand-gold text-sm font-bold tracking-wide uppercase mb-4 border border-brand-gold/20">
+            <Gift className="w-4 h-4 mr-2" /> Season's Greetings
           </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-brand-mirage">
+          <h2 className="text-3xl md:text-5xl text-brand-charcoal">
             Holiday Favorites
           </h2>
         </div>

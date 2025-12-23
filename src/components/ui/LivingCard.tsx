@@ -87,7 +87,7 @@ export const LivingCard: React.FC<LivingCardProps> = ({
           transformStyle: "preserve-3d",
         }}
         className={cn(
-          "w-full h-full rounded-sm overflow-hidden shadow-xl transition-shadow duration-300 group-hover:shadow-2xl bg-white",
+          "w-full h-full rounded-sm overflow-hidden shadow-premium transition-shadow duration-500 group-hover:shadow-premium-hover bg-white",
           aspectClasses[aspectRatio]
         )}
       >

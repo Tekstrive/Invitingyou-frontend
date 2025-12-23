@@ -1,47 +1,72 @@
 import { Link } from "react-router-dom";
 import { Button } from "../ui/Button";
+import { Star, Shield, Heart } from "lucide-react";
 
 export const Hero = () => {
   return (
-    <section className="relative bg-brand-sand overflow-hidden">
+    <section className="relative bg-brand-ivory overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="relative z-10 pb-8 bg-brand-sand sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
+        <div className="relative z-10 pb-8 bg-brand-ivory sm:pb-16 md:pb-20 lg:max-w-2xl lg:w-full lg:pb-28 xl:pb-32">
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
-            <div className="sm:text-center lg:text-left animate-fade-in">
-              <h1 className="text-4xl tracking-tight font-bold text-brand-mirage sm:text-5xl md:text-6xl">
-                <span className="block xl:inline">
-                  Celebrations start with a
-                </span>{" "}
-                <span className="block text-brand-orange xl:inline">
+            <div className="sm:text-center lg:text-left page-transition">
+              {/* Premium Badge */}
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-gold/10 border border-brand-gold/20 rounded-full mb-6">
+                <Star className="w-4 h-4 text-brand-gold" />
+                <span className="text-sm font-medium text-brand-gold">
+                  No ads, ever. Just beautiful designs.
+                </span>
+              </div>
+
+              <h1 className="text-4xl tracking-tight text-brand-charcoal sm:text-5xl md:text-6xl lg:text-7xl">
+                <span className="block">Celebrations start with a</span>{" "}
+                <span className="block text-brand-orange mt-2">
                   stunning invitation.
                 </span>
               </h1>
-              <p className="mt-3 text-base text-brand-mirage/70 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0 font-light">
+
+              <p className="mt-6 text-lg text-brand-charcoal/60 sm:mt-8 sm:text-xl sm:max-w-xl sm:mx-auto md:mt-8 md:text-xl lg:mx-0 font-light leading-relaxed">
                 Create elegant, ad-free online invitations for weddings,
-                birthdays, and parties. Experience the joy of gathering with our
-                premium design suite.
+                birthdays, and life's special moments. Experience the joy of
+                gathering.
               </p>
-              <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start gap-4">
-                <div className="rounded-sm shadow">
+
+              <div className="mt-8 sm:mt-10 sm:flex sm:justify-center lg:justify-start gap-4">
+                <div>
                   <Link to="/templates">
                     <Button
                       size="lg"
-                      className="w-full md:w-auto text-lg px-8 rounded-sm shadow-orange-200/50"
+                      className="w-full md:w-auto text-lg px-10 py-4 rounded-sm btn-premium"
                     >
                       Browse Designs
                     </Button>
                   </Link>
                 </div>
-                <div className="mt-3 sm:mt-0 sm:ml-3">
+                <div className="mt-4 sm:mt-0">
                   <Link to="/templates">
                     <Button
                       variant="outline"
                       size="lg"
-                      className="w-full md:w-auto text-lg px-8 rounded-sm border-brand-orange/50 text-brand-orange hover:bg-brand-orange/10 hover:text-brand-orange"
+                      className="w-full md:w-auto text-lg px-10 py-4 rounded-sm border-brand-charcoal/20 text-brand-charcoal hover:bg-brand-charcoal hover:text-white transition-all"
                     >
                       View Demo
                     </Button>
                   </Link>
+                </div>
+              </div>
+
+              {/* Trust Signals */}
+              <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-brand-charcoal/50 sm:justify-center lg:justify-start">
+                <div className="flex items-center gap-2">
+                  <Shield className="w-4 h-4" />
+                  <span>1000+ Templates</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Heart className="w-4 h-4" />
+                  <span>Loved by 50k+ Hosts</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Star className="w-4 h-4" />
+                  <span>Premium Quality</span>
                 </div>
               </div>
             </div>
@@ -54,7 +79,7 @@ export const Hero = () => {
           src="/hero-bg.png"
           alt="Elegant Party Setup"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-sand via-brand-sand/60 to-transparent lg:via-brand-sand/20"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-ivory via-brand-ivory/60 to-transparent lg:via-brand-ivory/20"></div>
       </div>
     </section>
   );

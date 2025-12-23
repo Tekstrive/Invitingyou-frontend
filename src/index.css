@@ -1,37 +1,127 @@
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap");
 @import "tailwindcss";
 
 @theme {
+  /* Premium Color Palette */
   --color-brand-mirage: #16232a;
-  --color-brand-sand: #e4eef0;
+  --color-brand-sand: #f5f1eb;
   --color-brand-orange: #ff5b04;
   --color-brand-sea: #075056;
-  --font-sans: "Plus Jakarta Sans", sans-serif;
+  --color-brand-gold: #c5a56b;
+  --color-brand-ivory: #faf8f5;
+  --color-brand-charcoal: #1a1a1a;
+  --color-brand-cream: #f9f6f1;
+
+  /* Typography */
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
 body {
-  background-color: theme("colors.brand.sand");
-  color: theme("colors.brand.mirage");
+  background-color: theme("colors.brand.ivory");
+  color: theme("colors.brand.charcoal");
   font-family: theme("fontFamily.sans");
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1,
-h2,
+/* Elegant Display Typography for Headings */
+h1 {
+  font-family: theme("fontFamily.display");
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-family: theme("fontFamily.display");
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
 h3,
 h4,
 h5,
 h6 {
   font-family: theme("fontFamily.sans");
+  font-weight: 600;
+}
+
+/* Premium Button Styles */
+.btn-premium {
+  background: linear-gradient(
+    135deg,
+    var(--color-brand-orange) 0%,
+    #ff7a33 100%
+  );
+  box-shadow: 0 4px 14px rgba(255, 91, 4, 0.25);
+  transition: all 0.3s ease;
+}
+
+.btn-premium:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 91, 4, 0.35);
+}
+
+/* Gold Accent for Premium Elements */
+.gold-accent {
+  color: var(--color-brand-gold);
+}
+
+.gold-gradient {
+  background: linear-gradient(135deg, #c5a56b 0%, #e6d5b8 50%, #c5a56b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Premium Card Shadows */
+.shadow-premium {
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.04),
+    0 4px 8px rgba(0, 0, 0, 0.04),
+    0 16px 32px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-premium-hover {
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.05),
+    0 8px 16px rgba(0, 0, 0, 0.05),
+    0 24px 48px rgba(0, 0, 0, 0.08);
 }
 
 /* Hide scrollbar while maintaining scroll functionality */
 .hide-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari and Opera */
+  display: none;
+}
+
+/* Smooth Page Transitions */
+.page-transition {
+  animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Premium Divider */
+.divider-gold {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--color-brand-gold),
+    transparent
+  );
 }

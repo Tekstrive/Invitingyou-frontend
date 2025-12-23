@@ -9,8 +9,7 @@ const journeySteps = [
     title: "She Said Yes",
     subtitle: "Engagement Parties",
     icon: Heart,
-    image:
-      "https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?auto=format&fit=crop&q=80",
+    image: "/images/engagement.png",
     color: "bg-rose-50 text-rose-600",
   },
   {
@@ -27,8 +26,7 @@ const journeySteps = [
     title: "New Beginnings",
     subtitle: "Baby Shower",
     icon: Gift,
-    image:
-      "https://images.unsplash.com/photo-1557823568-1eb8ee09f221?auto=format&fit=crop&q=80",
+    image: "/images/baby-shower.png",
     color: "bg-blue-50 text-blue-600",
   },
   {
@@ -36,8 +34,7 @@ const journeySteps = [
     title: "Growing Up",
     subtitle: "First Birthday",
     icon: Cake,
-    image:
-      "https://images.unsplash.com/photo-1530103862676-de3c9a59af38?auto=format&fit=crop&q=80",
+    image: "/images/first-birthday.png",
     color: "bg-yellow-50 text-yellow-600",
   },
   {
@@ -45,8 +42,7 @@ const journeySteps = [
     title: "Together Forever",
     subtitle: "Holiday Cards",
     icon: ArrowRight,
-    image:
-      "https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&q=80",
+    image: "/images/holiday-together.png",
     color: "bg-green-50 text-green-600",
   },
 ];
@@ -59,10 +55,10 @@ export const LifeJourneyScroll = () => {
     <div className="py-24 bg-white relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12 flex items-end justify-between">
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold text-brand-mirage mb-4">
+          <h2 className="text-3xl md:text-5xl text-brand-charcoal mb-4">
             For Every Chapter of Your Story
           </h2>
-          <p className="text-brand-mirage/60 max-w-lg">
+          <p className="text-brand-charcoal/60 max-w-lg">
             From saying "I do" to celebrating milestones, InvitingYou is there
             to help you gather your loved ones.
           </p>

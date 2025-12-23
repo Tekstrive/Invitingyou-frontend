@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import * as fabric from "fabric";
 import type { CanvasDesignData } from "../../types/fabric";
 
@@ -124,7 +124,7 @@ export const TemplatePreview = ({
           src={fallbackThumbnail}
           alt="Template preview"
           className={className}
-          style={{ width, height, objectFit: "cover" }}
+          style={{ width: "100%", height: "100%", objectFit: "contain" }}
         />
       );
     }
@@ -155,7 +155,7 @@ export const TemplatePreview = ({
       src={previewUrl}
       alt="Template preview"
       className={className}
-      style={{ width, height, objectFit: "cover" }}
+      style={{ width: "100%", height: "100%", objectFit: "contain" }}
     />
   );
 };
