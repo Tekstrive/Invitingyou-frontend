@@ -3,7 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { useEffect } from "react";
 import { Plus, X } from "lucide-react";
-import { Button } from "../ui/Button";
+import { Button } from "../../ui/Button";
 
 // Schema Definition
 const rsvpSettingsSchema = z.object({

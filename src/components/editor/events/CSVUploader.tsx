@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useDropzone } from "react-dropzone";
 import Papa from "papaparse";
 import { Upload, FileText, AlertCircle, CheckCircle } from "lucide-react";
-import { Button } from "../ui/Button";
+import { Button } from "../../ui/Button";
 
 export interface ParsedGuest {
   name: string;

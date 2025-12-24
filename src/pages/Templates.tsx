@@ -262,10 +262,8 @@ export const Templates = () => {
                           name={template.name}
                           category={template.category}
                           subcategory={template.subcategory}
-                          style={template.style}
                           thumbnail={template.thumbnail}
                           designData={template.designData}
-                          features={template.features}
                           isPremium={template.isPremium}
                           onQuickView={handleQuickView}
                         />

@@ -1,7 +1,7 @@
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
-import { Button } from "../ui/Button";
+import { Button } from "../../ui/Button";
 
 // Schema Definition
 const contactSchema = z.object({

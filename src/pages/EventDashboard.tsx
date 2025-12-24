@@ -111,11 +111,17 @@ export const EventDashboard = () => {
           const guestsWithRSVP: GuestWithRSVP[] = allGuests.map(
             (guest: Guest) => {
               // Find RSVP by matching guestId
-              const rsvp = rsvps.find((r: Record<string, unknown>) => {
-                const rsvpGuestId =
-                  typeof r.guestId === "string" ? r.guestId : r.guestId?._id;
-                return rsvpGuestId === guest._id;
-              });
+              const rsvp = rsvps.find(
+                (
+                  r: Record<string, unknown> & {
+                    guestId?: string | { _id: string };
+                  }
+                ) => {
+                  const rsvpGuestId =
+                    typeof r.guestId === "string" ? r.guestId : r.guestId?._id;
+                  return rsvpGuestId === guest._id;
+                }
+              );
               return {
                 ...guest,
                 rsvpStatus: rsvp?.status || null,

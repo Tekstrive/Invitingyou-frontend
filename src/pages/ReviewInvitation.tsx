@@ -9,7 +9,7 @@ import { Edit2, Users, Calendar, MapPin, Clock } from "lucide-react";
 export const ReviewInvitation = () => {
   const { eventId } = useParams<{ eventId: string }>();
   const navigate = useNavigate();
-  const [isSending, setIsSending] = useState(false);
+  const [isSending] = useState(false);
 
   // Fetch event data
   const { data: eventData, isLoading } = useQuery({
