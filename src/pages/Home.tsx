@@ -23,16 +23,16 @@ export const Home = () => {
       title: "Upload Your Own",
       description: "Personalize in seconds",
       link: "/templates?filter=upload",
-      color: "bg-brand-cream-dark",
-      iconColor: "text-white",
+      color: "bg-brand-cream",
+      iconColor: "text-brand-black",
     },
     {
       icon: Palette,
       title: "Design It Yourself",
       description: "Create from scratch",
       link: "/templates?filter=custom",
-      color: "bg-brand-black",
-      iconColor: "text-white",
+      color: "bg-brand-cream",
+      iconColor: "text-brand-black",
     },
     {
       icon: Calendar,
@@ -66,7 +66,7 @@ export const Home = () => {
                 <Link
                   key={action.title}
                   to={action.link}
-                  className="group bg-white border-2 border-brand-sea/10 rounded-sm p-8 hover:border-brand-orange hover:shadow-xl transition-all duration-300"
+                  className="group bg-white border-2 border-brand-cream/30 rounded-sm p-8 hover:border-brand-black hover:shadow-xl transition-all duration-300"
                 >
                   <div
                     className={`${action.color} w-16 h-16 rounded-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}
@@ -75,7 +75,7 @@ export const Home = () => {
                       className={`w-8 h-8 ${(action as any).iconColor || "text-white"}`}
                     />
                   </div>
-                  <h3 className="text-xl font-bold text-brand-mirage mb-2">
+                  <h3 className="text-xl font-bold text-brand-black mb-2">
                     {action.title}
                   </h3>
                   <p className="text-brand-mirage/60">{action.description}</p>
