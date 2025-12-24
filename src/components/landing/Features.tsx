@@ -36,7 +36,7 @@ export const Features = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="lg:text-center mb-16">
-          <h2 className="text-brand-orange font-semibold tracking-wide uppercase text-sm">
+          <h2 className="text-brand-black/60 font-semibold tracking-wide uppercase text-sm">
             Why InvitingYou?
           </h2>
           <p className="mt-2 text-3xl leading-8 font-bold tracking-tight text-brand-mirage sm:text-4xl">

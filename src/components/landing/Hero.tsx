@@ -10,16 +10,16 @@ export const Hero = () => {
           <main className="mt-10 mx-auto max-w-7xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
             <div className="sm:text-center lg:text-left page-transition">
               {/* Premium Badge */}
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-gold/10 border border-brand-gold/20 rounded-full mb-6">
-                <Star className="w-4 h-4 text-brand-gold" />
-                <span className="text-sm font-medium text-brand-gold">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-cream/30 border border-brand-cream-dark/20 rounded-full mb-6">
+                <Star className="w-4 h-4 text-brand-black" />
+                <span className="text-sm font-medium text-brand-black">
                   No ads, ever. Just beautiful designs.
                 </span>
               </div>
 
               <h1 className="text-4xl tracking-tight text-brand-charcoal sm:text-5xl md:text-6xl lg:text-7xl">
                 <span className="block">Celebrations start with a</span>{" "}
-                <span className="block text-brand-orange mt-2">
+                <span className="block text-brand-black mt-2 underline decoration-brand-cream decoration-4 underline-offset-4">
                   stunning invitation.
                 </span>
               </h1>

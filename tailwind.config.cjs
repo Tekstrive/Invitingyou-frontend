@@ -5,18 +5,21 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          mirage: "#16232A", // Primary Base (replaces Black)
-          black: "#16232A", // Alias for back-compat
+          black: "#1a1a1a", // Primary text and elements
+          "black-light": "#2d2d2d", // Lighter variation
+          mirage: "#1a1a1a", // Alias for back-compat
 
-          orange: "#FF5B04", // Blaze Orange (Primary Accent)
-          gold: "#FF5B04", // Alias for back-compat
-          cyan: "#FF5B04", // Alias for back-compat
+          cream: "#ccc8B9", // Primary accent color
+          "cream-light": "#e8e5df", // Lighter cream for backgrounds
+          "cream-dark": "#a49b84", // Darker cream for contrast
 
-          sea: "#075056", // Deep Sea Green
-          sage: "#075056", // Alias for back-compat
+          orange: "#ccc8B9", // Alias for back-compat (mapped to cream)
+          gold: "#a49b84", // Alias for back-compat (mapped to cream-dark)
+          cyan: "#ccc8B9", // Alias for back-compat
 
-          sand: "#E4EEF0", // Wild Sand (Background)
-          cream: "#E4EEF0", // Alias for back-compat
+          sea: "#a49b84", // Alias for back-compat (mapped to cream-dark)
+          sage: "#a49b84", // Alias for back-compat
+          sand: "#e8e5df", // Alias for back-compat (mapped to cream-light)
 
           white: "#FFFFFF",
         },
@@ -55,7 +58,7 @@ module.exports = {
         },
       },
       backgroundImage: {
-        "gradient-premium": "linear-gradient(135deg, #FDFBF7 0%, #E8EFEA 100%)",
+        "gradient-premium": "linear-gradient(135deg, #e8e5df 0%, #ccc8B9 100%)",
       },
     },
   },

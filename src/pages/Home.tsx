@@ -15,28 +15,32 @@ export const Home = () => {
       title: "Browse Templates",
       description: "Explore our stunning collection",
       link: "/templates",
-      color: "bg-brand-orange",
+      color: "bg-brand-cream",
+      iconColor: "text-brand-black",
     },
     {
       icon: Upload,
       title: "Upload Your Own",
       description: "Personalize in seconds",
       link: "/templates?filter=upload",
-      color: "bg-brand-sea",
+      color: "bg-brand-cream-dark",
+      iconColor: "text-white",
     },
     {
       icon: Palette,
       title: "Design It Yourself",
       description: "Create from scratch",
       link: "/templates?filter=custom",
-      color: "bg-brand-mirage",
+      color: "bg-brand-black",
+      iconColor: "text-white",
     },
     {
       icon: Calendar,
       title: "View Dashboard",
       description: "Manage your events",
       link: "/dashboard",
-      color: "bg-brand-orange",
+      color: "bg-brand-cream",
+      iconColor: "text-brand-black",
     },
   ];
 
@@ -67,7 +71,9 @@ export const Home = () => {
                   <div
                     className={`${action.color} w-16 h-16 rounded-sm flex items-center justify-center mb-6 group-hover:scale-110 transition-transform`}
                   >
-                    <Icon className="w-8 h-8 text-white" />
+                    <Icon
+                      className={`w-8 h-8 ${(action as any).iconColor || "text-white"}`}
+                    />
                   </div>
                   <h3 className="text-xl font-bold text-brand-mirage mb-2">
                     {action.title}

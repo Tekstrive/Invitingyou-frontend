@@ -82,7 +82,7 @@ export const LoginForm = () => {
       <button
         type="submit"
         disabled={isSubmitting}
-        className="w-full bg-blue-600 text-white py-2 px-4 rounded-sm hover:bg-blue-700 focus:ring-4 focus:ring-blue-300 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+        className="w-full bg-brand-black text-white py-2 px-4 rounded-sm hover:bg-brand-black/90 focus:ring-4 focus:ring-brand-cream-dark disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
       >
         {isSubmitting ? "Logging in..." : "Log In"}
       </button>

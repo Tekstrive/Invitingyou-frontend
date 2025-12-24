@@ -359,8 +359,8 @@ export const CreateEvent = () => {
                             flex items-center justify-center w-10 h-10 rounded-full font-bold transition-all
                             ${
                               currentStep >= step.number
-                                ? "bg-brand-mirage text-white"
-                                : "bg-brand-sand text-neutral-400"
+                                ? "bg-brand-black text-white"
+                                : "bg-brand-cream-light text-brand-black/40"
                             }
                          `}
                 >
@@ -373,14 +373,14 @@ export const CreateEvent = () => {
                 <span
                   className={`ml-3 font-medium ${
                     currentStep >= step.number
-                      ? "text-brand-mirage"
-                      : "text-neutral-400"
+                      ? "text-brand-black"
+                      : "text-brand-black/40"
                   }`}
                 >
                   {step.title}
                 </span>
                 {step.number < 3 && (
-                  <div className="w-12 h-px bg-neutral-200 mx-4" />
+                  <div className="w-12 h-px bg-brand-cream mx-4" />
                 )}
               </div>
             ))}
@@ -388,7 +388,7 @@ export const CreateEvent = () => {
         </div>
 
         {/* Content Area */}
-        <Card className="shadow-lg border-brand-sand bg-white overflow-hidden">
+        <Card className="shadow-lg border-brand-cream bg-white overflow-hidden">
           <div className="p-8">
             <div className="flex justify-between items-center mb-8">
               <h2 className="text-xl font-bold">
@@ -423,7 +423,7 @@ export const CreateEvent = () => {
               <div className="space-y-8">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   <div className="space-y-4">
-                    <h3 className="font-bold text-brand-mirage text-lg">
+                    <h3 className="font-bold text-brand-black text-lg">
                       Add Individual Guest
                     </h3>
                     <ContactUploadForm
@@ -443,7 +443,7 @@ export const CreateEvent = () => {
                 </div>
 
                 <div className="border-t border-neutral-100 pt-8">
-                  <h3 className="font-bold text-brand-mirage text-lg mb-4">
+                  <h3 className="font-bold text-brand-black text-lg mb-4">
                     Guest List ({guests.length})
                   </h3>
                   {loadingGuests ? (
@@ -457,7 +457,7 @@ export const CreateEvent = () => {
                   )}
                 </div>
 
-                <div className="flex justify-end gap-4 pt-4 border-t border-neutral-100">
+                <div className="flex justify-end gap-4 pt-4 border-t border-brand-cream">
                   <Button variant="outline" onClick={handleFinish}>
                     Finish Later
                   </Button>

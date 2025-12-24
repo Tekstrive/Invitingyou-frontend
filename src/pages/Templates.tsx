@@ -151,8 +151,8 @@ export const Templates = () => {
                       className={cn(
                         "px-4 py-2 rounded-sm text-sm font-medium whitespace-nowrap transition-colors",
                         activeFilter === filter
-                          ? "bg-brand-orange text-white"
-                          : "bg-brand-sand text-brand-mirage"
+                          ? "bg-brand-cream text-brand-black"
+                          : "bg-brand-cream-light text-brand-black/80"
                       )}
                     >
                       {filter === "all"

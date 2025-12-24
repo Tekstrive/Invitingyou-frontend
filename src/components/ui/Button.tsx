@@ -25,19 +25,20 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         ref={ref}
         className={cn(
           // Base styles
-          "inline-flex items-center justify-center rounded-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-brand-orange disabled:pointer-events-none disabled:opacity-50",
+          "inline-flex items-center justify-center rounded-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-brand-cream-dark disabled:pointer-events-none disabled:opacity-50",
           // Micro-interaction
           "active:scale-[0.98]",
           // Variants
           variant === "primary" &&
-            "bg-brand-mirage text-white hover:bg-brand-mirage/90 shadow-sm",
+            "bg-brand-black text-white hover:bg-brand-black/90 shadow-sm",
           variant === "secondary" &&
-            "bg-brand-orange text-white hover:bg-brand-orange/90 shadow-sm shadow-orange-200",
+            "bg-brand-cream text-brand-black hover:bg-brand-cream-dark hover:text-white shadow-sm",
           variant === "outline" &&
-            "border border-brand-mirage/20 bg-transparent shadow-sm hover:bg-brand-sand hover:text-brand-mirage",
-          variant === "ghost" && "hover:bg-brand-sand hover:text-brand-mirage",
+            "border border-brand-black/20 bg-transparent shadow-sm hover:bg-brand-cream-light hover:text-brand-black",
+          variant === "ghost" &&
+            "hover:bg-brand-cream-light hover:text-brand-black",
           variant === "link" &&
-            "text-brand-mirage underline-offset-4 hover:underline",
+            "text-brand-black underline-offset-4 hover:underline",
           // Sizes
           size === "default" && "h-10 px-6 py-2",
           size === "sm" && "h-8 rounded-sm px-3 text-xs",

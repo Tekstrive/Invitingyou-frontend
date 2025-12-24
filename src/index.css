@@ -2,15 +2,22 @@
 @import "tailwindcss";
 
 @theme {
-  /* Premium Color Palette */
-  --color-brand-mirage: #16232a;
-  --color-brand-sand: #f5f1eb;
-  --color-brand-orange: #ff5b04;
-  --color-brand-sea: #075056;
-  --color-brand-gold: #c5a56b;
-  --color-brand-ivory: #faf8f5;
+  /* Black & Cream Color Palette */
+  --color-brand-black: #1a1a1a;
+  --color-brand-black-light: #2d2d2d;
+  --color-brand-cream: #ccc8b9;
+  --color-brand-cream-light: #e8e5df;
+  --color-brand-cream-dark: #a49b84;
+  --color-brand-white: #ffffff;
+
+  /* Legacy aliases for backward compatibility */
+  --color-brand-mirage: #1a1a1a;
+  --color-brand-sand: #e8e5df;
+  --color-brand-orange: #ccc8b9;
+  --color-brand-sea: #a49b84;
+  --color-brand-gold: #a49b84;
+  --color-brand-ivory: #e8e5df;
   --color-brand-charcoal: #1a1a1a;
-  --color-brand-cream: #f9f6f1;
 
   /* Typography */
   --font-display: "Cormorant Garamond", Georgia, serif;
@@ -18,8 +25,8 @@
 }
 
 body {
-  background-color: theme("colors.brand.ivory");
-  color: theme("colors.brand.charcoal");
+  background-color: theme("colors.brand.cream-light");
+  color: theme("colors.brand.black");
   font-family: theme("fontFamily.sans");
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -48,27 +55,25 @@ h6 {
 
 /* Premium Button Styles */
 .btn-premium {
-  background: linear-gradient(
-    135deg,
-    var(--color-brand-orange) 0%,
-    #ff7a33 100%
-  );
-  box-shadow: 0 4px 14px rgba(255, 91, 4, 0.25);
+  background: var(--color-brand-black);
+  color: white;
+  box-shadow: 0 4px 14px rgba(26, 26, 26, 0.15);
   transition: all 0.3s ease;
 }
 
 .btn-premium:hover {
+  background: var(--color-brand-black-light);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 91, 4, 0.35);
+  box-shadow: 0 6px 20px rgba(26, 26, 26, 0.25);
 }
 
-/* Gold Accent for Premium Elements */
+/* Cream Accent for Premium Elements */
 .gold-accent {
-  color: var(--color-brand-gold);
+  color: var(--color-brand-cream-dark);
 }
 
 .gold-gradient {
-  background: linear-gradient(135deg, #c5a56b 0%, #e6d5b8 50%, #c5a56b 100%);
+  background: linear-gradient(135deg, #a49b84 0%, #ccc8b9 50%, #a49b84 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -121,7 +126,7 @@ h6 {
   background: linear-gradient(
     90deg,
     transparent,
-    var(--color-brand-gold),
+    var(--color-brand-cream-dark),
     transparent
   );
 }

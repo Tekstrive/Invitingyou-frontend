@@ -112,13 +112,20 @@ export const Editor = () => {
         e.preventDefault();
         handleRedo();
       }
-      // Delete: Delete or Backspace
+      // Delete: Delete or Backspace (only when not editing text)
       else if (
         (e.key === "Delete" || e.key === "Backspace") &&
         selectedObject
       ) {
-        e.preventDefault();
-        handleDeleteObject();
+        // Check if we're editing text - don't delete if so
+        const isEditingText =
+          selectedObject.type === "i-text" &&
+          (selectedObject as fabric.IText).isEditing;
+
+        if (!isEditingText) {
+          e.preventDefault();
+          handleDeleteObject();
+        }
       }
     };
 
@@ -334,7 +341,7 @@ export const Editor = () => {
           </p>
           <button
             onClick={() => navigate("/templates")}
-            className="bg-blue-600 text-white px-4 py-2 rounded-sm hover:bg-blue-700 transition-colors"
+            className="bg-brand-black text-white px-4 py-2 rounded-sm hover:bg-brand-black/90 transition-colors"
           >
             Back to Templates
           </button>
@@ -421,11 +428,11 @@ export const Editor = () => {
       "px-4 py-2 rounded-sm transition-colors flex items-center";
     switch (saveStatus) {
       case "saved":
-        return `${baseClass} bg-green-600 text-white`;
+        return `${baseClass} bg-brand-black text-white`;
       case "error":
-        return `${baseClass} bg-red-600 text-white`;
+        return `${baseClass} bg-brand-black text-white`;
       default:
-        return `${baseClass} bg-blue-600 text-white hover:bg-blue-700`;
+        return `${baseClass} bg-brand-black text-white hover:bg-brand-black/90`;
     }
   };
 
@@ -489,7 +496,7 @@ export const Editor = () => {
               {eventId && saveStatus !== "saving" && (
                 <button
                   onClick={() => navigate(`/event/details/${eventId}`)}
-                  className="px-4 py-2 bg-green-600 text-white rounded-sm hover:bg-green-700 transition-colors flex items-center"
+                  className="px-4 py-2 bg-brand-black text-white rounded-sm hover:bg-brand-black/90 transition-colors flex items-center"
                 >
                   Next: Event Details
                   <svg

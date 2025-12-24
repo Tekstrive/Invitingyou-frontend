@@ -44,8 +44,8 @@ export const TemplateSidebar = ({
               className={cn(
                 "w-full text-left px-4 py-2.5 rounded-sm transition-colors text-sm font-medium",
                 sortBy === "popular"
-                  ? "bg-brand-orange text-white"
-                  : "text-brand-mirage hover:bg-brand-sand"
+                  ? "bg-brand-cream text-brand-black"
+                  : "text-brand-black hover:bg-brand-cream-light"
               )}
             >
               Most Popular
@@ -55,8 +55,8 @@ export const TemplateSidebar = ({
               className={cn(
                 "w-full text-left px-4 py-2.5 rounded-sm transition-colors text-sm font-medium",
                 sortBy === "newest"
-                  ? "bg-brand-orange text-white"
-                  : "text-brand-mirage hover:bg-brand-sand"
+                  ? "bg-brand-cream text-brand-black"
+                  : "text-brand-black hover:bg-brand-cream-light"
               )}
             >
               Newest First
@@ -78,8 +78,8 @@ export const TemplateSidebar = ({
                 className={cn(
                   "w-full text-left px-4 py-2.5 rounded-sm transition-colors text-sm font-medium flex items-center justify-between",
                   activeFilter === category.id
-                    ? "bg-brand-orange text-white"
-                    : "text-brand-mirage hover:bg-brand-sand"
+                    ? "bg-brand-cream text-brand-black"
+                    : "text-brand-black hover:bg-brand-cream-light"
                 )}
               >
                 <span>{category.label}</span>
